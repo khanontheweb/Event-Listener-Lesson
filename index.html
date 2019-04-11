@@ -42,7 +42,7 @@
             // Select the HTML element
             const buttonExample = document.getElementById("btn");
 
-            //Add a handler, specifying first the event, and then the function (behavior) you want
+            // Add a handler, specifying first the event, and then the function (behavior) you want
             buttonExample.addEventListener('click', function(event) {
                 alert("Hello from button!");
             });
@@ -51,6 +51,38 @@
 
         <h3>Resulting Element</h3>
         <button id="btn">Event Example</button>
+
+        <h2>Practical Example</h2>
+        <p>What if you wanted to create a spoiler section and a button to show/hide the spoiler? That can be accomplished with event listeners!</p>
+        <button id="spoiler">Show Spoiler</button>
+        <p class="border border-dark bg-light mt-4 p-4   hidden" id="spoiler-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam reiciendis blanditiis magnam eum voluptatem deserunt rerum libero quasi nostrum quisquam, minus, illo laborum distinctio hic? Numquam assumenda possimus quae nobis!
+            Eius voluptas, consequuntur eveniet, dolor quia sit molestiae doloribus quas hic similique, ipsa voluptatem. Libero a illum sapiente veniam corrupti? Numquam, doloremque. Commodi accusamus, ab architecto laborum ipsum veniam maxime.
+            Ea fugit enim veniam voluptatum autem rerum vitae illo dignissimos, non tempora voluptatibus id quaerat voluptates ipsa soluta dolorum incidunt sint vel ab ullam magnam. Autem repudiandae praesentium laboriosam fugiat.
+            Ducimus, nulla, pariatur reiciendis, fugiat earum voluptate esse ab eius eligendi placeat sunt consequuntur velit laborum harum voluptatum autem possimus debitis est laboriosam. Nulla iusto rem labore sint animi sed!
+            Autem quaerat suscipit omnis fuga modi alias soluta, incidunt repellendus hic esse nulla in error eligendi nostrum labore delectus magnam quidem consectetur aliquid repellat cum possimus iure ea! Ut, aut!
+            Fuga enim neque adipisci aspernatur magni quia necessitatibus, provident perspiciatis dicta iure explicabo eveniet corrupti dolore sunt molestiae veritatis atque nihil officiis voluptatibus, ipsum aliquid cum? Facere voluptas eos ratione.
+            Exercitationem sequi cum veritatis, perspiciatis accusamus in, odit optio obcaecati minus dignissimos voluptatibus, atque magni libero fuga dolore beatae laboriosam reiciendis deleniti voluptas maiores. Nulla esse tempore iure voluptate unde!
+            Eveniet dignissimos assumenda minus modi nemo natus, hic quasi? Accusantium aliquam ullam, autem cumque laboriosam, nulla delectus sed voluptas tempora voluptatibus alias minus ab, deleniti earum at fuga voluptate sunt!
+            Distinctio voluptates delectus iste dicta dolore tempora molestiae placeat doloremque corrupti fugiat itaque rem accusamus exercitationem et nemo, at sunt est numquam illum. Fuga voluptatum veritatis deleniti temporibus exercitationem odit?
+            Quis quaerat perferendis cum modi dolorum voluptas, commodi quisquam. Laudantium pariatur perspiciatis labore. Tenetur expedita, corrupti distinctio ducimus quas perspiciatis aut cumque voluptas a voluptatem, culpa, provident necessitatibus quam porro?
+        </p>
+        
+        <h3>JavaScript</h3>
+        <p>I will only be showing the JavaScript for the button</p>
+        <pre class="bg-light border border-dark">
+            <code>
+                // Select the button
+                const spoiler = document.getElementById("spoiler");
+                    
+                // Handler that toggles the hidden class
+                spoiler.addEventListener('click', function(event) {
+                    const spoilerText = document.getElementById("spoiler-text");
+                    spoilerText.classList.toggle("hidden");
+                });
+            </code>
+        </pre>
+        <p>This is a good example of how a callback function for an event listener can affect another element on the page.</p>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
