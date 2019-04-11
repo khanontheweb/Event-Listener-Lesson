@@ -28,12 +28,21 @@
     <h2>What does the code for an event listener look like?</h2>
     <h3>HTML</h3>
     <pre>
-        <code>
-            <button id="btn">Event Example</button>
-        </code>
+        <code>&lt;button id="btn"&gt;Event Example&lt;/button&gt;</code>
     </pre>
     
     <h3>JavaScript</h3>
-    
+    <pre>
+        <code>
+            // Select the HTML element
+            const buttonExample = document.getElementById("btn");
+
+            //Add a handler, specifying first the event, and then the function (behavior) you want
+            buttonExample.addEventListener('click', function(event) {
+                alert("Hello from button!");
+            });
+        </code>
+    </pre>
+
 </body>
 </html>
